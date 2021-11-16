@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:ital,wght@0,400;1,300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@300;400&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+}
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+/* =========================animation==================== */
+@-webkit-keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes up-down {
+    0% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(-10px);
+    }
+  }
+/* ===============================================navbar================================================ */
+.navbar{
+  display: flex;
+  /* position: fixed; */
+  justify-content: center;
+  align-items: center;
+  /* min-height: 10vh; */
+  background-color: #fff !important;
+}
+.nav-links{
+  display: flex;
+  justify-content: flex-end;
+  width: 75%;
+}
+.home,
+.about,
+.service,
+.contact{
+  text-decoration: none;
+  color: #111;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.navbar .nav-links a:hover {
+  color: #009acd !important;
+}
+.navbar .logo{
+  background: -webkit-linear-gradient(#eee, #009acd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.5rem !important;
+  font-weight:bolder;
+}
+.navbar .nav-links .menu_active {
+  font-weight: bold;
+  border-bottom: 1px solid #271d26;
+}
+.toggle-bar-icons{
+  display: none;
+}
+
+
+/* ============================================home page=========================================== */
+#header {
+  width: 100%;
+  height: 80vh;
+  margin-top: 60px;
+}
+#header h1 {
+  margin: 0 0 10px 0;
+  font-size: 2.7rem;
+  font-weight: 700;
+  color: #111;
+  /* letter-spacing: 2px; */
+}
+#header .brand-name {
+  color: #3498db;
+}
+#header h2 {
+  font-size: 1.5rem;
+  color: #484848;
+}
+#header .btn-get-started {
+  font-weight: 400;
+  font-size: 1.2rem;
+  letter-spacing: 1;
+  display: inline-block;
+  border: 3px solid #3498db;
+  border-radius: 50px;
+  color: #3498db;
+  transition: 0.5s;
+  text-decoration: none;
+  padding: 5px 20px;
+}
+#header .btn-get-started:hover {
+  color: #fff;
+  background: #3498db;
+}
+
+.header-img {
+  text-align: right;
+}
+#header .animated {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+/* ===========================================================contact========================================= */
+
+.contact_div{
+  width: 100%;
+  height: 80vh;
+  
+}
+
+footer p{
+  padding: 10px;
+  margin: 0;
+}
+/* ==================================================respomnsiv=================================================== */
+@media (max-width: 991px) {
+  #header{
+    height: 100vh;
+    text-align: center;
+  }
+  #header .header-img {
+    text-align: center;
+  }
+  #header .header-img img{
+    width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo{
+    display: flex;
+    position: absolute;
+    top:15px;
+    left: 35px;
+  }
+  .nav-links{
+    display: none;
+  }
+  .nav-links-other{
+    z-index: 10000;
+    position: absolute;
+    display: block;
+    list-style: none;
+    background: transparent;
+    background-color: rgba(0, 0, 0, 0.9);
+    left: 0;
+    top: 75px;
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+}
+.home,
+.about,
+.service,
+.contact{
+  text-align: center;
+  padding: 2rem;
+  width: 100%;
+  color: #eee;
+  font-weight: normal;
+  transition: all 0.5s ease;
+}
+.navbar .nav-links a:hover {
+  color: #3498db !important;
+}
+/* .navbar .nav-links :hover .menu_active {
+  border-bottom: 2px solid #009acd;
+} */
+.toggle-bar-icons{
+  z-index: 10000;
+  display: block;
+  position: absolute;
+  font-size: 1.5rem;
+  color: #222;
+  background-color:#fff;
+  outline: none;
+  border: none;
+  top:15px;
+  right: 25px;
+}
+.toggle-bar-icons:hover{
+  border: none;
+  outline: none;
+}
+  #header{
+    margin-top: 20px;
+  }
+  #header h1{
+    font-size: 2rem;
+  }
+  #header h2{
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+  #header .header-img img{
+    width: 70%;
+  }
+}
